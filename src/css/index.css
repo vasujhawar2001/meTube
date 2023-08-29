@@ -74,7 +74,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .scroll-horizontal {
     overflow: auto !important;
   }
@@ -84,5 +84,11 @@ a {
   }
   .search-bar{
     width:200px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logo-link {
+    display: none;
   }
 }

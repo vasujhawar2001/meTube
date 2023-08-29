@@ -3,17 +3,18 @@ import { Container, TextField, InputAdornment, IconButton } from '@mui/material'
 import SearchIcon from "@mui/icons-material/Search"
 import MicIcon from '@mui/icons-material/Mic';
 import React, { useState } from 'react'
+import Sidebar from './SideBar';
 
 const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState("");
+    // const [searchTerm, setSearchTerm] = useState("");
 
-    const handleChange = (event) => {
-      setSearchTerm(event.target.value);
-    };
+    // const handleChange = (event) => {
+    //   setSearchTerm(event.target.value);
+    // };
   
   return (
     <div>
-    <Container maxWidth="md">
+    <Container maxWidth="sm">
     <form>
     <TextField
       id="search"
@@ -23,7 +24,7 @@ const SearchBar = () => {
     //   onChange={handleChange}
     
       sx={{ width: {
-        xs: 275,
+        xs: 250,
         sm: 400,
         md:600
       }}}

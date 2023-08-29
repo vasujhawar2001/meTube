@@ -10,6 +10,8 @@ import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
 
+export const logo = "https://cdn.vox-cdn.com/thumbor/6MyN91DqRPwnQlOhvqPEHV8paaI=/0x0:1680x1050/1400x1050/filters:focal(840x525:841x526):no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/9130449/YTLogo_old_new_animation.gif";
+
 export const categories = [
     { name: "New", icon: <AiFillHome />, type: "home" },
     { name: "Trending", icon: <MdLocalFireDepartment />, type: "category" },

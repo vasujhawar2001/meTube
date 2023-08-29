@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Toolbar, Typography } from '@mui/material'
 import React from 'react'
+import Sidebar from './SideBar'
 
 const Home = () => {
   return (
-    <Grid container >
-
-    </Grid>
+    <></>
   )
 }
 
