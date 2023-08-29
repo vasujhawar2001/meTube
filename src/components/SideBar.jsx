@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
+import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton, ListItemAvatar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
+import { categories, logo } from '../utils/constants';
 
 const useStyles = makeStyles((theme) => ({
     largeMenuIcon: {
       fontSize: '2.5rem', // Adjust the font size as needed
     },
   }));
+
+  const selectedCategory = "New";
   
 
 export const Sidebar = () => {
@@ -20,22 +23,26 @@ const classes = useStyles();
 
   return (
     <>
+    {/* written by GPT */}
       <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
         <MenuIcon className={classes.largeMenuIcon} />
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-        <List>
-          {/* Add your sidebar items here */}
-          <ListItem button>
-            <ListItemIcon>{/* Add an icon */}</ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>{/* Add an icon */}</ListItemIcon>
-            <ListItemText primary="Trending" />
-          </ListItem>
-          {/* Add more sidebar items */}
-        </List>
+        <div style={{ width: 225, textAlign: 'center', display:'flex', flexDirection:'row' }}> {/* Adjust the width as needed */}
+          <List>
+            <ListItemAvatar onClick={toggleDrawer}>
+              <img src={logo} style={{height:"70px"}}></img>
+            </ListItemAvatar>
+          {categories.map((category, index) => (
+              <ListItem className='category-btn' button key={index} style={{
+                
+              }}>
+                <ListItemIcon>{category.icon}</ListItemIcon>
+                <ListItemText primary={category.name} />
+              </ListItem>
+            ))}
+          </List>
+        </div>
       </Drawer>
     </>
   );

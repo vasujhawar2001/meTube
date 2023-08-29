@@ -15,9 +15,8 @@ const AppBar = () => {
       position="sticky"
       background="#ffff"
       justifyContent="space-between"
-      mt={0.5}
     >
-      <Toolbar sx={{paddingLeft:"10px"}}>
+      <Toolbar sx={{paddingLeft:"20px"}}>
           <Sidebar /> 
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img src={logo} alt="logo" height={80} className="logo-link"/>
