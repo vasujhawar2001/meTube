@@ -16,7 +16,7 @@ const AppBar = () => {
       justifyContent="space-between"
     >
       <Toolbar sx={{paddingLeft:{
-        xs:"10px",
+        xs:"15px",
         md:"20px"
       }}}>
           <SideBar /> 
@@ -26,12 +26,12 @@ const AppBar = () => {
       </Toolbar>
 
       <SearchBar />
-      <Box paddingRight="20px">
+      <Box sx={{mr:{sm:"20px", md:"10px"}}}>
         <a href="https://github.com/vasujhawar2001">
         <Avatar
           alt="Vasu Jhawar"
           src="https://avatars.githubusercontent.com/u/59659588?v=4"
-          sx={{ width: 51, height: 51 }}
+          sx={{ width:51, height:51}}
         />
         </a>
       </Box>

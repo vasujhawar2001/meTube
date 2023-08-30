@@ -8,7 +8,7 @@ import { githubUrl } from '../utils/constants';
 
 const useStyles = makeStyles((theme) => ({
     largeMenuIcon: {
-      fontSize: '2.5rem', // Adjust the font size as needed
+      fontSize: "1.5rem", // Adjust the font size as needed
     },
   }));
   

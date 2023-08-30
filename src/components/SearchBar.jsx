@@ -3,7 +3,6 @@ import { Container, TextField, InputAdornment, IconButton } from '@mui/material'
 import SearchIcon from "@mui/icons-material/Search"
 import MicIcon from '@mui/icons-material/Mic';
 import React, { useState } from 'react'
-import Sidebar from './SideBar';
 
 const SearchBar = () => {
     // const [searchTerm, setSearchTerm] = useState("");
@@ -14,7 +13,7 @@ const SearchBar = () => {
   
   return (
     <div>
-    <Container maxWidth="sm">
+    <Container>
     <form>
     <TextField
       id="search"

@@ -5,6 +5,8 @@ import ChannelCard from "../Cards/ChannelCard";
 import { useParams } from 'react-router-dom';
 import { fetchAPI } from '../utils/fetchAPI';
 import { Context } from '../context/contextApi';
+import { Box } from '@mui/material';
+import { Padding } from '@mui/icons-material';
 
 // page - /channel
 const ChannelPage = () => {
@@ -26,13 +28,18 @@ const ChannelPage = () => {
 
     fetchAPI(`search?channelId=${id}&part=snippet&order=date`)
     .then((data)=>{
-      setVideos(data?.items);
+      setVideos(data);
     })
 
   }, [id, setVideos])
 
   return (
-    <div>ChannelPage</div>
+    <Box minHeight="95vh" sx={{padding:"20px", margin:"20px"}}>
+      <Box>
+        <ChannelCard channelDetail={channel}/>
+      </Box>
+        <Videos videos={videos} />
+    </Box>
   )
 }
 

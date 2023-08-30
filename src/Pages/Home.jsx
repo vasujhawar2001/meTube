@@ -23,10 +23,10 @@ const Home = () => {
   return (
     <>
     <Box>
-      <Box sx={{paddingLeft:10, mt:2}}>
+      <Box sx={{paddingLeft:{xs:4,md:8}, mt:2, mb:2}}>
       <Typography variant='h5'>{selectedCategory} Videos</Typography>
       </Box>
-      <Box sx={{padding:4}}>
+      <Box sx={{padding:{sm:2,md:4}, marginLeft:{xs:"30px"}}}>
       <Videos videos={videos}/>
       </Box>
     </Box>
