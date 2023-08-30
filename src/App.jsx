@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/App.css'
 import {AppBar, Home, VideoPage, ChannelPage, SearchFeed} from './components'
+import { AppContext } from './context/contextApi'
 
 function App() {
 
   return (
+    <AppContext>
     <BrowserRouter>
       <AppBar />
       <Routes>
@@ -14,6 +16,7 @@ function App() {
         <Route path='/search/:id' element={<SearchFeed />} />
       </Routes>
     </BrowserRouter>
+    </AppContext>
   )
 }
 

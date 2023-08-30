@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton, ListItemAvatar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import { categories, logo } from '../utils/constants';
+import { Context } from '../context/contextApi';
 
 const useStyles = makeStyles((theme) => ({
     largeMenuIcon: {
       fontSize: '2.5rem', // Adjust the font size as needed
     },
   }));
-
-  const selectedCategory = "New";
   
 
 export const Sidebar = () => {
-const classes = useStyles();
+
+  const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const {selectedCategory, setSelectedCategory} = useContext(Context);
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -34,9 +35,8 @@ const classes = useStyles();
               <img src={logo} style={{height:"70px"}}></img>
             </ListItemAvatar>
           {categories.map((category, index) => (
-              <ListItem className='category-btn' button key={index} style={{
-                
-              }}>
+              <ListItem className='category-btn' button key={index}
+              onClick={()=>setSelectedCategory(category.name)}>
                 <ListItemIcon>{category.icon}</ListItemIcon>
                 <ListItemText primary={category.name} />
               </ListItem>
