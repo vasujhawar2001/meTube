@@ -54,6 +54,7 @@ a {
   transition: all 0.3s ease;
 }
 
+
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
@@ -83,4 +84,13 @@ a {
   .logo-link {
     display: none;
   }
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-item {
+  width: 100%;
 }
