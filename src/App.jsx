@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/App.css'
-import {AppBar, Home, VideoPage, ChannelPage, SearchFeed} from './components'
+import {AppBar} from './components';
+import {ChannelPage, VideoPage, SearchFeed, Home} from './Pages';
 import { AppContext } from './context/contextApi'
 
 function App() {

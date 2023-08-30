@@ -2,8 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { Box, Grid, Toolbar, Typography } from '@mui/material'
 import React, { useContext, useEffect } from 'react'
-import Sidebar from './SideBar'
-import Videos from './Videos'
+import { Videos } from '../components'
 import { fetchAPI } from '../utils/fetchAPI'
 import { Context } from '../context/contextApi'
 
@@ -23,9 +22,14 @@ const Home = () => {
 
   return (
     <>
-    <Typography variant='h3'>{selectedCategory} Videos</Typography>
-
-    <Videos videos={videos}/>
+    <Box>
+      <Box sx={{paddingLeft:10, mt:2}}>
+      <Typography variant='h5'>{selectedCategory} Videos</Typography>
+      </Box>
+      <Box sx={{padding:4}}>
+      <Videos videos={videos}/>
+      </Box>
+    </Box>
     </>
   )
 }

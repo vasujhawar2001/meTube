@@ -2,8 +2,7 @@
 import { Avatar, Box, Toolbar } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { logo } from '../utils/constants'
-import SearchBar from './SearchBar'
-import Sidebar from './SideBar'
+import {SearchBar, SideBar} from './';
 
 const AppBar = () => {
   return (
@@ -16,8 +15,11 @@ const AppBar = () => {
       background="#ffff"
       justifyContent="space-between"
     >
-      <Toolbar sx={{paddingLeft:"20px"}}>
-          <Sidebar /> 
+      <Toolbar sx={{paddingLeft:{
+        xs:"10px",
+        md:"20px"
+      }}}>
+          <SideBar /> 
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img src={logo} alt="logo" height={80} className="logo-link"/>
             </Link>
@@ -29,7 +31,7 @@ const AppBar = () => {
         <Avatar
           alt="Vasu Jhawar"
           src="https://avatars.githubusercontent.com/u/59659588?v=4"
-          sx={{ width: 56, height: 56 }}
+          sx={{ width: 51, height: 51 }}
         />
         </a>
       </Box>

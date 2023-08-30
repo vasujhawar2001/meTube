@@ -27,6 +27,9 @@ const SearchBar = () => {
         xs: 250,
         sm: 400,
         md:600
+      }, mt:{
+        xs:1,
+        md:0
       }}}
       InputProps={{
         endAdornment: (

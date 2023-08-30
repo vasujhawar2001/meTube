@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import { categories, logo } from '../utils/constants';
 import { Context } from '../context/contextApi';
+import { githubUrl } from '../utils/constants';
 
 const useStyles = makeStyles((theme) => ({
     largeMenuIcon: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 
-export const Sidebar = () => {
+export const SideBar = () => {
 
   const classes = useStyles();
   const [open, setOpen] = useState(false);
@@ -36,7 +37,9 @@ export const Sidebar = () => {
             </ListItemAvatar>
           {categories.map((category, index) => (
               <ListItem className='category-btn' button key={index}
-              onClick={()=>setSelectedCategory(category.name)}>
+              onClick={()=>category.type==="menu"?
+              window.location = {githubUrl} :
+              setSelectedCategory(category.name)}>
                 <ListItemIcon>{category.icon}</ListItemIcon>
                 <ListItemText primary={category.name} />
               </ListItem>
@@ -48,4 +51,4 @@ export const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
