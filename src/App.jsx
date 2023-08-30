@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './css/App.css'
 import {AppBar} from './components';
 import {ChannelPage, VideoPage, SearchFeed, Home} from './Pages';
 import { AppContext } from './context/contextApi'
+import Footer from './components/Footer';
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
         <Route path='/channel/:id' element={<ChannelPage />} />
         <Route path='/search/:searchQuery' element={<SearchFeed />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </AppContext>
   )
