@@ -5,6 +5,7 @@ import { logo } from '../utils/constants'
 import {SearchBar, SideBar} from './';
 
 const AppBar = () => {
+
   return (
     <div>
     <Box

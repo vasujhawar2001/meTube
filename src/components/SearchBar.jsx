@@ -1,27 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { Container, TextField, InputAdornment, IconButton } from '@mui/material'
+import { Container, TextField, InputAdornment, IconButton, Paper } from '@mui/material'
 import SearchIcon from "@mui/icons-material/Search"
 import MicIcon from '@mui/icons-material/Mic';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
-    // const [searchTerm, setSearchTerm] = useState("");
+    
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
-    // const handleChange = (event) => {
-    //   setSearchTerm(event.target.value);
-    // };
-  
+  const handleSubmit = (event)=>{
+    event.preventDefault();
+    navigate(`/search/${searchTerm}`);
+  }
+
   return (
     <div>
-    <Container>
-    <form>
+    <form
+      onSubmit={handleSubmit}>
     <TextField
       id="search"
       type="search"
       label="Youtube"
-    //   value={searchTerm}
-    //   onChange={handleChange}
-    
+      value={searchTerm}
+      onChange={(event)=> setSearchTerm(event.target.value)}
+      onSubmit={handleSubmit}
       sx={{ width: {
         xs: 250,
         sm: 400,
@@ -44,7 +48,6 @@ const SearchBar = () => {
       }}
     />
     </form>
-  </Container>
   </div>
   )
 }

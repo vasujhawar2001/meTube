@@ -27,7 +27,7 @@ export const VideoCard = ({ video }) => {
         
             <div style={{ display: "grid", gridGap: "8px", gridTemplateColumns: "auto 1fr", marginBottom:"10px"}}>
                 <Avatar
-                src={demoProfilePicture}
+                src={video?.thumbnails?.high?.url || demoProfilePicture}
                 sx={{ width: 32, height: 32, marginRight: 1 }}
                 />
                 <Link to={videoId ? `/video/${videoId}`: demoVideoUrl}>

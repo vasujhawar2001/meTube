@@ -5,6 +5,8 @@ import { makeStyles } from '@mui/styles';
 import { categories, logo } from '../utils/constants';
 import { Context } from '../context/contextApi';
 import { githubUrl } from '../utils/constants';
+import { useNavigate } from 'react-router-dom';
+import { CatchingPokemon } from '@mui/icons-material';
 
 const useStyles = makeStyles((theme) => ({
     largeMenuIcon: {
@@ -17,6 +19,7 @@ export const SideBar = () => {
 
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   const {selectedCategory, setSelectedCategory} = useContext(Context);
 
   const toggleDrawer = () => {
@@ -39,7 +42,7 @@ export const SideBar = () => {
               <ListItem className='category-btn' button key={index}
               onClick={()=>category.type==="menu"?
               window.location = {githubUrl} :
-              setSelectedCategory(category.name)}>
+              navigate(`/search/${category.name}`)}>
                 <ListItemIcon>{category.icon}</ListItemIcon>
                 <ListItemText primary={category.name} />
               </ListItem>

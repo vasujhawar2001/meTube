@@ -11,20 +11,6 @@ export const AppContext = ({children}) => {
     const [selectedCategory, setSelectedCategory] = useState("New");
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    // useEffect(() => {
-
-    //     fetchSelectedCategoryData(selectedCategory);
-    // }, [selectedCategory]);
-
-    const fetchSelectedCategoryData = async (query) => {
-        setLoading(true);
-        const data = await fetchAPI(`search?part=snippet&q=${query}`)
-        console.log(data);
-        setVideos(data);
-        console.log(videos);
-        setLoading(false);
-    };
-
     return (
         <Context.Provider
             value={{
