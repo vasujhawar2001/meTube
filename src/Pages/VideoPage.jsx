@@ -21,7 +21,7 @@ const VideoPage = () => {
     fetchAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
       .then((data) => setVideos(data));
 
-      console.log(videos);
+      // console.log(videos);
   }, [id]);
 
   if(!videoDetail?.snippet) return <Loader />;

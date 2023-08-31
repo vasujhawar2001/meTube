@@ -15,7 +15,7 @@ const Home = () => {
     setLoading(true);
     fetchAPI(`search?part=snippet&q=${selectedCategory}`)
     .then((data)=>{
-      console.log(data);
+      // console.log(data);
       setVideos(data)
       setLoading(false);
     })

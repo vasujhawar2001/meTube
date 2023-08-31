@@ -14,7 +14,7 @@ const SearchFeed = () => {
     setLoading(true);
     fetchAPI(`search?part=snippet&q=${searchQuery}`)
     .then((data)=>{
-      console.log(data);
+      // console.log(data);
       setVideos(data)
       setLoading(false);
     })
