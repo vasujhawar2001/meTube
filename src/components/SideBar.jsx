@@ -41,7 +41,7 @@ export const SideBar = () => {
           {categories.map((category, index) => (
               <ListItem className='category-btn' button key={index}
               onClick={()=>category.type==="menu"?
-              window.location = {githubUrl} :
+              window.open(githubUrl, '_blank', 'noopener,noreferrer') :
               navigate(`/search/${category.name}`)}>
                 <ListItemIcon>{category.icon}</ListItemIcon>
                 <ListItemText primary={category.name} />

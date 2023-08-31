@@ -27,7 +27,7 @@ const AppBar = () => {
       </Toolbar>
 
       <SearchBar />
-      <Box sx={{mr:{sm:"20px", md:"10px"}}}>
+      <Box sx={{mr:{xs:"5px", md:"15px"}}}>
         <a href="https://github.com/vasujhawar2001">
         <Avatar
           alt="Vasu Jhawar"

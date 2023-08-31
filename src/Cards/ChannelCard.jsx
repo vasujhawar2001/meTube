@@ -24,7 +24,7 @@ const ChannelCard = ({channelDetail}) =>{
         justifyContent:'center', textAlign:'center'}} >
         <CardMedia image={channel?.thumbnails?.high?.url || demoProfilePicture} 
         sx={{
-            borderRadius:"50%", height:"180px", border:"1px solid", mb:2
+            borderRadius:"50%", height:"160px", border:"1px solid", mb:2
         }}
         />
         <Typography variant='h6'>

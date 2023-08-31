@@ -27,10 +27,12 @@ const SearchBar = () => {
       onChange={(event)=> setSearchTerm(event.target.value)}
       onSubmit={handleSubmit}
       sx={{ width: {
-        xs: 250,
-        sm: 400,
-        md:600
-      }, mt:{
+        xs:200,
+        sm: 300,
+        md: 450,
+        lg: 550
+      }, height: -1,  
+      mt:{
         xs:1,
         md:0
       }}}
