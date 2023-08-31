@@ -5,10 +5,11 @@ import React, { useContext, useEffect } from 'react'
 import { Videos } from '../components'
 import { fetchAPI } from '../utils/fetchAPI'
 import { Context } from '../context/contextApi'
+import {Loader} from "../components"
 
 const Home = () => {
 
-  const {selectedCategory, videos, setVideos, setLoading} = useContext(Context);
+  const {selectedCategory, videos, setVideos, loading, setLoading} = useContext(Context);
 
   useEffect(()=>{
     setLoading(true);
@@ -20,8 +21,9 @@ const Home = () => {
     })
   },[selectedCategory])
 
+  if(loading) return <Loader />
+
   return (
-    <>
     <Box>
       <Box sx={{paddingLeft:{xs:4,md:8}, mt:2, mb:2}}>
       <Typography variant='h5'>{selectedCategory} Videos</Typography>
@@ -30,7 +32,6 @@ const Home = () => {
       <Videos videos={videos}/>
       </Box>
     </Box>
-    </>
   )
 }
 

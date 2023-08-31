@@ -3,12 +3,14 @@ import {AppBar} from './components';
 import {ChannelPage, VideoPage, SearchFeed, Home} from './Pages';
 import { AppContext } from './context/contextApi'
 import Footer from './components/Footer';
+import { reponame } from '../config';
 
 function App() {
 
   return (
     <AppContext>
-    <BrowserRouter>
+    
+    <BrowserRouter basename={reponame}>  
       <AppBar />
       <Routes>
         <Route path='/' element={<Home />} />
